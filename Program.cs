@@ -14,13 +14,22 @@ namespace Lesson_2_1
             Console.WriteLine("Введите 7 цифр:");
             int[] massiv = new int[7];
 
-            massiv[0] = Convert.ToInt32(Console.ReadLine());
-            massiv[1] = Convert.ToInt32(Console.ReadLine());
-            massiv[2] = Convert.ToInt32(Console.ReadLine());
-            massiv[3] = Convert.ToInt32(Console.ReadLine());
-            massiv[4] = Convert.ToInt32(Console.ReadLine());
-            massiv[5] = Convert.ToInt32(Console.ReadLine());
-            massiv[6] = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                massiv[0] = Convert.ToInt32(Console.ReadLine());
+                massiv[1] = Convert.ToInt32(Console.ReadLine());
+                massiv[2] = Convert.ToInt32(Console.ReadLine());
+                massiv[3] = Convert.ToInt32(Console.ReadLine());
+                massiv[4] = Convert.ToInt32(Console.ReadLine());
+                massiv[5] = Convert.ToInt32(Console.ReadLine());
+                massiv[6] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            catch (Exception ex)
+            {
+               Console.WriteLine(ex.Message);
+            }
+            
 
             double saz = (massiv[0] + massiv[1] + massiv[2] + massiv[3] + massiv[4] + massiv[5] + massiv[6]) / 7;
 
